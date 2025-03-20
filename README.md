@@ -8,7 +8,7 @@ This project is a real-time multiplayer Uno game for up to 4 players. The applic
 
 You can watch a demo of the game to see how the real-time gameplay works.
 
-[**Watch Demo Video**](./doc/demo.png)  
+[**Watch Demo Video**](./doc/demo.mp4)  
 ![Demo Thumbnail](./doc/thumbnail.png)
 
 ## Technologies Used
