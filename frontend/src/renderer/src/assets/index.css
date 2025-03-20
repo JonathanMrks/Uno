@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    @apply h-full;
+  }
+
+  html,
+  body {
+    @apply h-full;
+
+    @apply select-none;
+
+    @apply bg-transparent;
+
+    @apply font-mono antialiased text-white;
+
+    @apply overflow-hidden;
+  }
+
+  button {
+    -webkit-app-region: no-drag;
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  animation: spinner-rotate 1.2s linear infinite;
+}
+
+.spinner-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #3498db;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: fade-in-out 1.2s ease-in-out infinite;
+}
+
+.spinner-dot-1 {
+  transform: translate(-50%, -50%) rotate(0deg) translate(30px);
+  animation-delay: 0s;
+}
+
+.spinner-dot-2 {
+  transform: translate(-50%, -50%) rotate(120deg) translate(30px);
+  animation-delay: 0.4s;
+}
+
+.spinner-dot-3 {
+  transform: translate(-50%, -50%) rotate(240deg) translate(30px);
+  animation-delay: 0.8s;
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in-out {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

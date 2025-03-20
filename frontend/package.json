@@ -1,0 +1,66 @@
+{
+  "name": "unodunite",
+  "version": "0.9.0",
+  "description": "An Electron application with React and TypeScript for Uno gaming",
+  "main": "./out/main/index.js",
+  "homepage": "https://gitlab.com/jala-university1/cohort-1/oficial-pt-programa-o-4-apr-221/se-o-b/unidunite#readme",
+  "author": "jala.university",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jala-university1/cohort-1/oficial-pt-programa-o-4-apr-221/se-o-b/unidunite.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/jala-university1/cohort-1/oficial-pt-programa-o-4-apr-221/se-o-b/unidunite/issues"
+  },
+  "scripts": {
+    "format": "eslint . --fix",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "electron-vite build && electron-builder --win",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^3.0.0",
+    "axios": "^1.7.5",
+    "electron-updater": "^6.1.7",
+    "jotai": "^2.9.3",
+    "js-cookie": "^3.0.5",
+    "react-router-dom": "^6.26.1",
+    "react-toastify": "^10.0.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@electron-toolkit/eslint-config-ts": "^2.0.0",
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "postcss": "^8.4.41",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.1"
+  }
+}
